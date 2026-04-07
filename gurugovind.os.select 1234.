@@ -1,0 +1,100 @@
+Last login: Sat Apr  4 03:11:49 on console
+gurugovinds@Gurus-MacBook-Air ~ % nano lab.sh
+gurugovinds@Gurus-MacBook-Air ~ % chmod +x lab.sh
+gurugovinds@Gurus-MacBook-Air ~ % ./lab.sh
+===== Directory Manager =====
+
+1. Create Directory
+2. List Directories
+3. Delete Directory
+4. Exit
+
+Enter your choice: 1
+Enter directory name to create: guru
+mkdir: guru: File exists
+Directory 'guru' created.
+
+1. Create Directory
+2. List Directories
+3. Delete Directory
+4. Exit
+
+Enter your choice: 4
+Exiting...
+gurugovinds@Gurus-MacBook-Air ~ % nano lab.sh
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  UW PICO 5.09                                                    File: lab.sh                                                     Modified  
+
+2#!/bin/bash
+
+echo "===== Directory Manager ====="
+
+while true
+do
+    echo ""
+    echo "1. Create Directory"
+    echo "2. List Directories"
+    echo "3. Delete Directory"
+    echo "4. Exit"
+    echo ""
+    read -p "Enter your choice: " choice
+
+    case $choice in
+
+    1)
+        read -p "Enter directory name to create: " dirname
+        mkdir "$dirname"
+        echo "Directory '$dirname' created."
+        ;;
+
+    2)
+        echo "Listing directories:"
+        ls -d */
+        ;;
+
+    3)
+        read -p "Enter directory name to delete: " dirname
+        rmdir "$dirname"
+        echo "Directory '$dirname' deleted."
+        ;;
+
+    4)
+        echo "Exiting..."
+        break
+        ;;
+
+    *)
+        echo "Invalid choice. Try again."
+        ;;
+
+    esac
+
+done
+                                                           [ Unknown Command: ^S ]                                                           
+^G Get Help            ^O WriteOut            ^R Read File           ^Y Prev Pg             ^K Cut Text            ^C Cur Pos             
+^X Exit                ^J Justify             ^W Where is            ^V Next Pg             ^U UnCut Text          ^T To Spell            
